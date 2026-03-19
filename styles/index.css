@@ -1,0 +1,41 @@
+:root {
+  --slidev-slide-container-background: #080808;
+}
+
+.slidev-layout {
+  background: #080808 !important;
+  color: #F5F0E8;
+  font-family: Calibri, sans-serif;
+}
+
+/* Remove default padding from layouts */
+.slidev-layout.default {
+  padding: 0;
+}
+
+/* Global reset for slide backgrounds */
+.slidev-page {
+  background: #080808 !important;
+}
+
+/* Hide default slide number styling */
+.slidev-nav {
+  color: #606060;
+}
+
+/* Ensure blockquotes have no default border */
+blockquote {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Smooth fade transition */
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 0.8s ease;
+}
+.slide-enter-from,
+.slide-leave-to {
+  opacity: 0;
+}
