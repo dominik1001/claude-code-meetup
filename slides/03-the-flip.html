@@ -200,10 +200,21 @@
       setTimeout(() => {
         document.getElementById('flame').classList.add('visible');
       }, 2200);
+      return;
     }
 
     if (e.key === 'ArrowRight' && flipped) window.location.href = '04-dominik.html';
-    if (e.key === 'ArrowLeft') window.location.href = '02-clarke-quote.html';
+    if (e.key === 'ArrowLeft' && !flipped) window.location.href = '02-clarke-quote.html';
+    if (e.key === 'ArrowLeft' && flipped) {
+      flipped = false;
+      document.getElementById('after').classList.remove('visible');
+      document.getElementById('after').classList.add('hidden');
+      document.getElementById('before').classList.remove('hidden');
+      document.getElementById('before').classList.add('visible');
+      document.getElementById('caption').classList.remove('visible');
+      document.getElementById('flame').classList.remove('visible');
+      document.getElementById('prompt').classList.remove('hidden');
+    }
   });
 </script>
 
