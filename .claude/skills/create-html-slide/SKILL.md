@@ -22,8 +22,9 @@ description: Create or update a single-file, fullscreen HTML slide for a live pr
 - Always tell the user what to do (subtle prompt or label)
 
 ## Interactions
-- When asked to make an interactive slide only use the left and right arrow keys to trigger the interaction.
-- When adding new slides or changing existing ones, make sure the previous slide is loaded whne pressing the left arrow key and the next slide is loaded when pressing the right arrow key. Make sure that interactions are still working. So when I browse through an interactive slide from beginning to end I only want to go to the next slide after the interactive part is done.
+- Arrow keys are the only mechanism — no clicks, no other keys.
+- **Slides without interaction:** → goes to next slide, ← goes to previous slide.
+- **Slides with interaction:** arrows step through the interaction first (→ forward, ← backward). Navigation to the next/previous slide only triggers once the interaction reaches its end or beginning.
 
 ## Inputs to ask for before building
 1. **Concept** — what is the one idea this slide teaches?
