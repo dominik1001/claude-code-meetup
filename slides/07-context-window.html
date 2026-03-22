@@ -190,6 +190,18 @@
     animation: fadeIn 2s ease-out 1.5s forwards;
   }
 
+  .slide-number {
+    position: fixed;
+    bottom: 2vh;
+    right: 2.5vw;
+    color: #2a2a2a;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    user-select: none;
+    z-index: 4;
+  }
+
   @keyframes fadeIn {
     from { opacity: 0; }
     to   { opacity: 0.6; }
@@ -221,6 +233,8 @@
 <div class="punchline" id="punchline">Structure is memory.</div>
 
 <div class="nav-hint" id="navHint">→</div>
+
+<div class="slide-number">7 / 9</div>
 
 <script>
   const LINE_COUNT = 32;
