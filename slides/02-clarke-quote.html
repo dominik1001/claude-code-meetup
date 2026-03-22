@@ -18,38 +18,53 @@
     font-family: Georgia, 'Times New Roman', serif;
   }
 
-  .container {
-    text-align: center;
-    max-width: 70vw;
+  .stage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6vw;
+    max-width: 92vw;
     position: relative;
   }
 
-  .quote {
-    color: #F5F0E8;
-    font-size: clamp(26px, 4vw, 52px);
-    font-style: italic;
-    line-height: 1.5;
+  /* Images — ghostly, emerging from darkness */
+  .portrait, .poster {
+    flex-shrink: 0;
     opacity: 0;
-    animation: fadeIn 3s ease-out 0.5s forwards;
+    animation: fadeIn 3s ease-out 3.5s forwards;
   }
 
-  .quote .magic {
-    color: #C9A84C;
-    text-shadow: 0 0 30px rgba(201, 168, 76, 0.25);
-    transition: text-shadow 2s ease;
+  .portrait img,
+  .poster img {
+    display: block;
+    height: clamp(180px, 30vh, 320px);
+    width: auto;
+    border-radius: 4px;
+    filter: grayscale(100%) brightness(0.45) contrast(1.1);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
   }
 
-  .attribution {
+  .portrait-label,
+  .poster-label {
     color: #606060;
     font-family: Calibri, Arial, sans-serif;
-    font-size: clamp(14px, 1.6vw, 22px);
-    margin-top: 5vh;
+    font-size: clamp(11px, 1.1vw, 15px);
+    text-align: center;
+    margin-top: 1.2vh;
     letter-spacing: 0.04em;
     opacity: 0;
-    animation: fadeIn 2s ease-out 3s forwards;
+    animation: fadeIn 2s ease-out 5s forwards;
   }
 
-  /* Open quote mark */
+  /* Center quote block */
+  .center {
+    text-align: center;
+    max-width: 50vw;
+    position: relative;
+    flex-shrink: 1;
+  }
+
   .quote-mark {
     position: absolute;
     top: -6vh;
@@ -62,10 +77,34 @@
     line-height: 1;
   }
 
-  /* Candle flame — recurring visual motif, slightly larger */
+  .quote {
+    color: #F5F0E8;
+    font-size: clamp(24px, 3.5vw, 48px);
+    font-style: italic;
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeIn 3s ease-out 0.5s forwards;
+  }
+
+  .quote .magic {
+    color: #C9A84C;
+    text-shadow: 0 0 30px rgba(201, 168, 76, 0.25);
+  }
+
+  .attribution {
+    color: #606060;
+    font-family: Calibri, Arial, sans-serif;
+    font-size: clamp(14px, 1.6vw, 22px);
+    margin-top: 4vh;
+    letter-spacing: 0.04em;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 3s forwards;
+  }
+
+  /* Candle flame — recurring visual motif */
   .flame-wrapper {
     position: absolute;
-    bottom: 8vh;
+    bottom: 6vh;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
@@ -108,12 +147,24 @@
 </head>
 <body>
 
-<div class="container">
-  <div class="quote-mark">"</div>
-  <div class="quote">
-    Any sufficiently advanced technology is indistinguishable from <span class="magic">magic.</span>
+<div class="stage">
+  <div class="portrait">
+    <img src="../content/assets/clarke-portrait.jpg" alt="Arthur C. Clarke, 1965">
+    <div class="portrait-label">Arthur C. Clarke</div>
   </div>
-  <div class="attribution">— Arthur C. Clarke, 1973</div>
+
+  <div class="center">
+    <div class="quote-mark">&ldquo;</div>
+    <div class="quote">
+      Any sufficiently advanced technology is indistinguishable from <span class="magic">magic.</span>
+    </div>
+    <div class="attribution">&mdash; Arthur C. Clarke, 1973</div>
+  </div>
+
+  <div class="poster">
+    <img src="../content/assets/2001-odyssey.png" alt="2001: A Space Odyssey (1968)">
+    <div class="poster-label">2001: A Space Odyssey</div>
+  </div>
 </div>
 
 <div class="flame-wrapper">
