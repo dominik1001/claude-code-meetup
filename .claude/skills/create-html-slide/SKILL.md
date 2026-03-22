@@ -1,6 +1,6 @@
 ---
 name: create-html-slide
-description: Create a single-file, fullscreen HTML slide for a live presentation.
+description: Create or update a single-file, fullscreen HTML slide for a live presentation.
 ---
 
 **Default style:** Always apply the `prestige-style` skill (colors, typography, layout rules) unless the user explicitly overrides it.
