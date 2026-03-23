@@ -2,7 +2,8 @@
 slide: 06
 title: The Context Window
 type: interactive
-notes: Start with the basics of the context window, then introduce the "Lost in the middle" phenomenon and what to do about it.
 ---
 
-**Concept:** The context window — what Claude can see and where things get lost
+Start with the basics of the context window, then explain to the user visually that the following statement is true:
+
+"When your context gets full, the model gets stupid."
