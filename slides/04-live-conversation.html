@@ -104,6 +104,20 @@
     z-index: 2;
   }
 
+  .concept-number {
+    position: fixed;
+    top: 4vh;
+    left: 4vw;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(64px, 10vw, 120px);
+    font-weight: normal;
+    color: #C9A84C;
+    opacity: 0.3;
+    line-height: 1;
+    user-select: none;
+    z-index: 1;
+  }
+
   @keyframes cursorAppear {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -117,6 +131,7 @@
 </head>
 <body>
 
+<div class="concept-number">1</div>
 <div class="bg"></div>
 
 <div class="content">
@@ -124,7 +139,7 @@
   <div class="label">live conversation</div>
 </div>
 
-<div class="slide-number">4 / 10</div>
+<div class="slide-number">4 / 9</div>
 
 <script>
   document.addEventListener('keydown', (e) => {

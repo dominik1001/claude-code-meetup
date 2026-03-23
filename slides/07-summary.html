@@ -122,10 +122,10 @@
             <div class="learning" id="l1">
                 <div class="learning-number">1</div>
                 <div class="learning-text">
-                    <div class="learning-title">The System Prompt</div>
+                    <div class="learning-title">The Harness</div>
                     <div class="learning-desc">
-                        Use the right tool for the task. Adapt the prompt to the
-                        task at hand.
+                        Claude Code is only a small harness on top of an LLM.
+                        The magic is in the model.
                     </div>
                 </div>
             </div>
@@ -138,10 +138,10 @@
             <div class="learning" id="l2">
                 <div class="learning-number">2</div>
                 <div class="learning-text">
-                    <div class="learning-title">The Context Window</div>
+                    <div class="learning-title">The System Prompt</div>
                     <div class="learning-desc">
-                        When your context gets full, the model gets stupid.
-                        Start fresh.
+                        Use the right tool for the task. Adapt the prompt to the
+                        task at hand.
                     </div>
                 </div>
             </div>
@@ -156,14 +156,15 @@
                 <div class="learning-text">
                     <div class="learning-title">The Agentic Loop</div>
                     <div class="learning-desc">
-                        Think what the model can do best. Give it the right tools.
+                        Think what the model can do best. Give it the right
+                        tools.
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <div class="slide-number">8 / 10</div>
+        <div class="slide-number">7 / 9</div>
 
         <script>
             // Steps: arrow-right reveals each learning (with its preceding divider), then the quote
@@ -202,7 +203,7 @@
             function forward() {
                 const nextStep = currentStep + 1;
                 if (nextStep >= reveals.length) {
-                    window.location.href = "09-end.html";
+                    window.location.href = "08-end.html";
                     return;
                 }
                 currentStep = nextStep;
@@ -211,7 +212,7 @@
 
             function backward() {
                 if (currentStep < 0) {
-                    window.location.href = "07-agentic-loop.html?state=last";
+                    window.location.href = "06-agentic-loop.html?state=last";
                     return;
                 }
                 hideStep(currentStep);

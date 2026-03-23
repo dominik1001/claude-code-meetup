@@ -1,5 +1,5 @@
 ---
-slide: 07
+slide: 06
 title: The Agentic Loop
 type: interactive
 ---

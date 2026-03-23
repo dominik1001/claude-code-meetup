@@ -350,7 +350,7 @@
   Think what the model can do <span class="gold">best</span>.<br>Give it the right <span class="gold">tools</span>.
 </div>
 
-<div class="slide-number">7 / 10</div>
+<div class="slide-number">6 / 9</div>
 
 <script>
   // Steps: each arrow-right press
@@ -361,7 +361,7 @@
     // Loop 1
     { type: 'separator', phase: null, loop: 1 },
     { type: 'think',  text: 'I need to read the content file to understand what slide 7 should show.', phase: 'think', loop: 1 },
-    { type: 'act',    text: 'tool: Read("content/07-agentic-loop.md")', phase: 'act', loop: 1 },
+    { type: 'act',    text: 'tool: Read("content/06-agentic-loop.md")', phase: 'act', loop: 1 },
     { type: 'result', text: 'The slide should explain the agentic loop using a real example.', phase: 'observe', loop: 1 },
 
     // Loop 2
@@ -373,7 +373,7 @@
     // Loop 3
     { type: 'separator', phase: null, loop: 3 },
     { type: 'think',  text: 'Now I have everything. Time to write the slide.', phase: 'think', loop: 3 },
-    { type: 'act',    text: 'tool: Write("slides/07-agentic-loop.html")', phase: 'act', loop: 3 },
+    { type: 'act',    text: 'tool: Write("slides/06-agentic-loop.html")', phase: 'act', loop: 3 },
     { type: 'result', text: 'Done. The file has been created.', phase: 'observe', loop: 3 },
 
     // Takeaway
@@ -725,7 +725,7 @@
     const nextStep = currentStep + 1;
 
     if (nextStep >= steps.length) {
-      window.location.href = '08-summary.html';
+      window.location.href = '07-summary.html';
       return;
     }
 
@@ -780,7 +780,7 @@
     }
 
     if (currentStep < 0) {
-      window.location.href = '06-context-window.html?state=last';
+      window.location.href = '05-system-prompt.html?state=last';
       return;
     }
 
