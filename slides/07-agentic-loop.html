@@ -212,10 +212,44 @@
     color: #7A5A10;
   }
 
+  /* ---- Terminal wrapper + tools bar ---- */
+  .terminal-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 62vh;
+  }
+
+  .tools-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 14px;
+    margin-bottom: 8px;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: clamp(11px, 1vw, 14px);
+  }
+
+  .tools-label {
+    color: #606060;
+    letter-spacing: 0.04em;
+    margin-right: 2px;
+  }
+
+  .tool-chip {
+    color: #F5F0E8;
+    background: rgba(201, 168, 76, 0.10);
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 2px 10px;
+    font-size: inherit;
+    letter-spacing: 0.02em;
+  }
+
   /* ---- Terminal (right side) ---- */
   .terminal {
     flex: 1;
-    max-height: 58vh;
+    min-height: 0;
     background: #0A1A0A;
     border: 1px solid #333;
     border-radius: 12px;
@@ -370,14 +404,21 @@
   </div>
 
   <!-- Right: terminal -->
-  <div class="terminal">
-    <div class="terminal-titlebar">
-      <div class="terminal-dot red"></div>
-      <div class="terminal-dot yellow"></div>
-      <div class="terminal-dot green"></div>
-      <div class="terminal-title-text">claude-code</div>
+  <div class="terminal-wrapper">
+    <div class="tools-bar">
+      <span class="tools-label">Available tools</span>
+      <span class="tool-chip">Read File</span>
+      <span class="tool-chip">Write File</span>
     </div>
-    <div class="terminal-body" id="termBody"></div>
+    <div class="terminal">
+      <div class="terminal-titlebar">
+        <div class="terminal-dot red"></div>
+        <div class="terminal-dot yellow"></div>
+        <div class="terminal-dot green"></div>
+        <div class="terminal-title-text">claude-code</div>
+      </div>
+      <div class="terminal-body" id="termBody"></div>
+    </div>
   </div>
 </div>
 
