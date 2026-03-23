@@ -707,8 +707,11 @@
     currentStep = steps.length - 1; // takeaway step
     takeaway.classList.add('visible');
   } else {
-    // Init
-    setTimeout(() => { title.classList.add('visible'); }, 200);
+    // Init: show title and layout immediately (diagram + terminal visible before first interaction)
+    setTimeout(() => {
+      title.classList.add('visible');
+      mainLayout.classList.add('visible');
+    }, 200);
   }
 
   async function forward() {
