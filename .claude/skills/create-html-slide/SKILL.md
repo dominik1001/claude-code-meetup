@@ -27,7 +27,12 @@ description: Create, recreate, update, or delete a single-file, fullscreen HTML 
 ## Interaction & Navigation
 - Arrow keys are the only mechanism — no clicks, no other keys.
 - **Slides without interaction:** → goes to next slide, ← goes to previous slide.
-- **Slides with interaction:** arrows step through the interaction first (→ forward, ← backward). Navigation to the next/previous slide only triggers once the interaction reaches its end or beginning. When moving backward from one slide to the previous, the user sees the last interation state of the previous slide.
+- **Slides with interaction:** arrows step through the interaction first (→ forward, ← backward). Navigation to the next/previous slide only triggers once the interaction reaches its end or beginning. When moving backward from one slide to the previous, the user sees the last interaction state of the previous slide.
+
+### Back-navigation contract (`?state=last`)
+- When navigating **backward** to a previous slide, always append `?state=last` to the URL (e.g., `window.location.href = '05-system-prompt.html?state=last'`).
+- Every slide with animation steps **must** check `new URLSearchParams(window.location.search).get('state') === 'last'` on load and, if true, immediately jump to the final animation state (all elements visible, stage/step set to the last value) — no animations, no delays.
+- Slides without animation steps can ignore the `?state=last` parameter.
 
 ## Inputs to ask for before building
 1. **Concept** — what is the one idea this slide teaches?
