@@ -1,5 +1,5 @@
 ---
-slide: 09
+slide: 08
 title: Closing
 type: closing
 notes: Final slide — thank the audience, open for Q&A

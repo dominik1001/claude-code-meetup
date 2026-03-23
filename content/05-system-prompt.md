@@ -1,5 +1,5 @@
 ---
-slide: 06
+slide: 05
 title: The System Prompt
 type: interactive
 notes: Explain what a system prompt is using an illustrating excerpt from the actual Claude Code system prompt. Since the audience includes many non-developers, explain why using Claude Code could make more sense for certain use cases or what they could do about the engineering-focused system prompt.
