@@ -182,10 +182,10 @@
 
 <script>
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowLeft') {
+  if (e.key === 'ArrowUp' || e.key === 'PageUp') {
     window.location.href = '08-summary.html?state=last';
   }
-  if (e.key === 'ArrowRight') {
+  if (e.key === 'ArrowDown' || e.key === 'PageDown') {
     window.location.href = '10-sources.html';
   }
 });

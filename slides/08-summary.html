@@ -219,11 +219,11 @@
             }
 
             document.addEventListener("keydown", (e) => {
-                if (e.key === "ArrowRight") {
+                if (e.key === "ArrowDown" || e.key === "PageDown") {
                     e.preventDefault();
                     forward();
                 }
-                if (e.key === "ArrowLeft") {
+                if (e.key === "ArrowUp" || e.key === "PageUp") {
                     e.preventDefault();
                     backward();
                 }

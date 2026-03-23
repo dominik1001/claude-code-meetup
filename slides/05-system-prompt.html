@@ -384,8 +384,8 @@
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') forward();
-    if (e.key === 'ArrowLeft') backward();
+    if (e.key === 'ArrowDown' || e.key === 'PageDown') forward();
+    if (e.key === 'ArrowUp' || e.key === 'PageUp') backward();
   });
 </script>
 

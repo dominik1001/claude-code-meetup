@@ -716,8 +716,8 @@
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') { e.preventDefault(); forward(); }
-    if (e.key === 'ArrowLeft') { e.preventDefault(); backward(); }
+    if (e.key === 'ArrowDown' || e.key === 'PageDown') { e.preventDefault(); forward(); }
+    if (e.key === 'ArrowUp' || e.key === 'PageUp') { e.preventDefault(); backward(); }
   });
 </script>
 

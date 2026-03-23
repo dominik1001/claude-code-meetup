@@ -25,9 +25,10 @@ description: Create, recreate, update, or delete a single-file, fullscreen HTML 
 - When asked to create a new slide or recreate an existing one do a quick online search about ideas for the content. Give the user three options to choose from.
 
 ## Interaction & Navigation
-- Arrow keys are the only mechanism — no clicks, no other keys.
-- **Slides without interaction:** → goes to next slide, ← goes to previous slide.
-- **Slides with interaction:** arrows step through the interaction first (→ forward, ← backward). Navigation to the next/previous slide only triggers once the interaction reaches its end or beginning. When moving backward from one slide to the previous, the user sees the last interaction state of the previous slide.
+- Arrow keys and presenter remote keys are the navigation mechanism — no clicks.
+- Supported keys: ↓ / PageDown = forward, ↑ / PageUp = backward. Always listen for both (e.g., `e.key === 'ArrowDown' || e.key === 'PageDown'`).
+- **Slides without interaction:** forward goes to next slide, backward goes to previous slide.
+- **Slides with interaction:** keys step through the interaction first (forward / backward). Navigation to the next/previous slide only triggers once the interaction reaches its end or beginning. When moving backward from one slide to the previous, the user sees the last interaction state of the previous slide.
 
 ### Back-navigation contract (`?state=last`)
 - When navigating **backward** to a previous slide, always append `?state=last` to the URL (e.g., `window.location.href = '05-system-prompt.html?state=last'`).
