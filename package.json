@@ -1,0 +1,24 @@
+{
+  "name": "claude-code-meetup",
+  "version": "1.0.0",
+  "description": "**A 10-minute talk demystifying Claude Code for everyday users.**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dominik1001/claude-code-meetup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/dominik1001/claude-code-meetup/issues"
+  },
+  "homepage": "https://github.com/dominik1001/claude-code-meetup#readme",
+  "dependencies": {
+    "playwright": "^1.58.2"
+  }
+}
